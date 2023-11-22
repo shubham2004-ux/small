@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bulb {
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+        
+        .ok {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bookmarks</h1>
+
+    <h1 id="name">ASHWIN</h1>
+
+    <h1 id="ok" class="ok">Shubham</h1>
+
+    <div id="bulb" class="">
+        that is bulb
+
+    </div>
+    <h1 id="shubham"></h1>
+    <script>
+        setTimeout(function() {
+
+
+        }, 20)
+
+        let name = "S.S.Devloper";
+        let number = 0;
+
+        const texteffect = setInterval(() => {
+            document.querySelector("#shubham").innerHTML += name[number];
+            number++;
+
+            if (number === name.length) {
+                stopinterval()
+            }
+
+        }, 100)
+
+        function stopinterval() {
+            clearInterval(texteffect)
+        }
+
+
+
+
+
+
+
+
+
+
+        setInterval(function() {
+            let a = document.querySelector("#ok").classList.toggle("ok")
+
+        }, 50)
+
+
+        let k = 'monababy'
+
+        let a = 0;
+
+        function stopbulb() {
+            clearInterval(stop)
+        }
+
+        const stop = setInterval(function() {
+
+            document.getElementById('bulb').classList.toggle("bulb")
+            a++
+
+            if (a === k.length) {
+                stopbulb()
+            }
+
+        }, 300)
+    </script>
+</body>
+
+</html>
